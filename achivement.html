@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreas Blom</title>
+    <script src="https://kit.fontawesome.com/ea807e68b9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <nav class="sidenav">
+            <h1>Andreas Blom</h1>
+            
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-person"></i> Aboute</a></li>
+                <li><a class="active" href="achivement.html"><i class="fa-solid fa-trophy"></i> Achievement</a></li>
+                <li><a href="portfolio.html"><i class="fa-solid fa-folder-open"></i> Portfolio</a></li>           
+                <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+            <br>
+            <footer> 
+                <p id = "copyright" class ="copyrighttext">
+                    Copyright &copy; 2023 Andreas Blom
+                </p>
+            </footer>
+        </nav>
+        <div class="main-content">
+            <section id="section3">
+                <div class="img-nature2">
+                    <img src="Bilder/nature2.jpg" alt="nature2" height="auto" width="50%">
+                </div>
+                <h1>Profil</h1>
+                <br>
+                <p>
+                    Nu efter närmare 20 år i samma branch, så har jag tagit nästa steg i min  personliga utveckling med att studera systemutveckling C#.
+                    Engagerad, intresserad och ansvarstagande person som alltid har drivet av att lära mig något nytt. 
+                    Och Programmering ger mig en möjlighet att lösa komplexa problem på en kreativ och effektiv sätt. 
+                    Att se mitt arbete komma till liv och hjälpa andra att nå sina mål är en otrolig känsla.
+
+                </p>
+
+                <br>
+                <br>
+                <br>
+                <div id="namn"></div>
+                <script>
+                    
+                     fetch('namn.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        
+                        const namnElement = document.getElementById('namn');
+
+                        data.forEach(work => {
+                        const namn = work.name;
+                        const p = document.createElement('p');
+                        p.textContent = namn;
+                        namnElement.appendChild(p);
+                        });
+                    });
+
+
+
+                </script>
+                
+                
+    
+                
+            </section>
+        </div>
+        <script src="number.js"></script>
+        <script src="cvcode.js"></script>
+        
+    
+</body>
+</html>
